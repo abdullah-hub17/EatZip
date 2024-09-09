@@ -31,6 +31,7 @@ app.get('/', (req, res) => {
 // create user API
 app.use("/api", require("./routes/userRoutes"));
 app.use("/api", require("./routes/DisplayDataRoutes"));
+app.use("/api", require("./routes/orderRoutes"));
 
 const port = process.env.PORT || 5000;
 
