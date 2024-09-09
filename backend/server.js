@@ -6,7 +6,6 @@ const Connectdb = require('./config/db');
 // dotenv path
 dotenv.config({ path: './config/.env' });
 
-// mongoDB connection
 Connectdb();
 
 const app = express()
@@ -31,9 +30,14 @@ app.get('/', (req, res) => {
 
 // create user API
 app.use("/api", require("./routes/userRoutes"));
+app.use("/api", require("./routes/DisplayDataRoutes"));
 
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
+
+const db = require('./config/db');
+//console.log(global.food_items);
