@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Card from "../components/Card";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
   return (
@@ -9,18 +11,10 @@ const Home = () => {
         <Navbar />
       </div>
       <div>
-        <div class="card mt-3" style={{ "width": "18rem", "maxHeight" : "360px" }}>
-          <img src="..." className="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some Important Text.
-            </p>
-            <div className="container w-100">
-                <select className="m2 h-100 w-100 bg-success " name="" id=""></select>
-            </div>
-          </div>
-        </div>
+        <Carousel />
+      </div>
+      <div>
+        <Card />
       </div>
       <div>
         <Footer />
